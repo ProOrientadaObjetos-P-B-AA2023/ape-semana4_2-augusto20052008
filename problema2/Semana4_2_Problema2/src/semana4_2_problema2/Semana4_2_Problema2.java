@@ -6,15 +6,15 @@ class Profesor{
     private double sueldoBasico;
     private double sueldoTotal;
     private String cedula;
-    private Provincia proviencia;
+    private Provincia provincia;
     //constructores
     public Profesor(){}
-    public Profesor(String nombre, String apellido, double sueldoBasico, String cedula, Provincia proviencia) {
+    public Profesor(String nombre, String apellido, double sueldoBasico, String cedula, Provincia provincia) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.sueldoBasico = sueldoBasico;
         this.cedula = cedula;
-        this.proviencia = proviencia;
+        this.provincia = provincia;
     }
     //operadores
     public void setNombre(String nombre) {
@@ -33,7 +33,7 @@ class Profesor{
         this.cedula = cedula;
     }
     public void setProviencia(Provincia proviencia) {
-        this.proviencia = proviencia;
+        this.provincia = proviencia;
     }
     public void calcularSueldoTotal(){
         this.sueldoTotal = this.sueldoBasico + (this.sueldoBasico * 0.2);
@@ -53,18 +53,28 @@ class Profesor{
     public String getCedula() {
         return cedula;
     }
-    public Provincia getProviencia() {
-        return proviencia;
+    public Provincia getProvincia() {
+        return provincia;
     }
-    public String toString() {
-        return "Profesor" 
-                + "\nNombre= " + nombre 
-                + "\nApellido= " + apellido 
-                + "\nSueldoBasico= " + sueldoBasico 
-                + "\nSueldoTotal= " + sueldoTotal 
-                + "\nCedula= " + cedula 
-                + "\nProviencia= " + proviencia;
+    public String toString(){
+        String msj = String.format("""
+                                   DATOS SOBRE PROFESOR
+                                   Nombre: %s 
+                                   Apellido: %s 
+                                   Sueldo Basico: %f
+                                   SueldoTotal: %f
+                                   Cedula: %s
+                                   Provincia: %s
+                                   """
+                ,this.getNombre()
+                ,this.getApellido()
+                ,this.getSueldoBasico()
+                ,this.getSueldoTotal()
+                ,this.getCedula()
+                ,this.getProvincia());
+        return msj;
     }
+
 }
 class Provincia{
     //Atrivutos
@@ -88,6 +98,13 @@ class Provincia{
     }
     public long getNumeroHabitante() {
         return numeroHabitante;
+    }
+    public String toString(){
+        return String.format("""
+                             %s
+                             Numero Habitantes: %d"""
+                , this.getNombre()
+                ,this.getNumeroHabitante());
     }
 }
 public class Semana4_2_Problema2 {

@@ -79,6 +79,11 @@ class Universidad{
     public String getDireccion() {
         return direccion;
     }
+    public String toString(){
+        return String.format("""
+                              %s
+                             Direccion: %s""", this.getNombre(),this.getDireccion());
+    }
 }
 public class TestEstudiante {
     public static void main(String[] args) {
