@@ -39,22 +39,22 @@ class Profesor{
         this.sueldoTotal = this.sueldoBasico + (this.sueldoBasico * 0.2);
     }
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
     public String getApellido() {
-        return apellido;
+        return this.apellido;
     }
     public double getSueldoBasico() {
-        return sueldoBasico;
+        return this.sueldoBasico;
     }
     public double getSueldoTotal() {
-        return sueldoTotal;
+        return this.sueldoTotal;
     }
     public String getCedula() {
-        return cedula;
+        return this.cedula;
     }
     public Provincia getProvincia() {
-        return provincia;
+        return this.provincia;
     }
     public String toString(){
         String msj = String.format("""
@@ -94,10 +94,10 @@ class Provincia{
         this.numeroHabitante = numeroHabitante;
     }
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
     public long getNumeroHabitante() {
-        return numeroHabitante;
+        return this.numeroHabitante;
     }
     public String toString(){
         return String.format("""

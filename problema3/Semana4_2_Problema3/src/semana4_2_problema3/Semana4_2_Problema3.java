@@ -35,22 +35,22 @@ class Automotor{
         this.valorMatricula = (((0.002/100)*this.valorVehiculo) *(this.anioActual-this.anioFabricante));
     }
     public String getCedulaDueno() {
-        return cedulaDueno;
+        return this.cedulaDueno;
     }
     public Fabricante getFabricanteVehiculo() {
-        return fabricanteVehiculo;
+        return this.fabricanteVehiculo;
     }
     public long getAnioFabricante() {
-        return anioFabricante;
+        return this.anioFabricante;
     }
     public long getAnioActual() {
-        return anioActual;
+        return this.anioActual;
     }
     public double getValorVehiculo() {
-        return valorVehiculo;
+        return this.valorVehiculo;
     }
     public double getValorMatricula() {
-        return valorMatricula;
+        return this.valorMatricula;
     }
         //Presentacion 
     public String toString(){
@@ -89,10 +89,10 @@ class Fabricante{
         this.ciudad = ciudad;
     }
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
     public String getCiudad() {
-        return ciudad;
+        return this.ciudad;
     }
     public String toString(){
         return String.format("""
@@ -106,6 +106,5 @@ public class Semana4_2_Problema3 {
         Automotor automotor1 = new Automotor("1950060796",fabricante1,2005,2023,20220);
         automotor1.calcularValorMatricula();
         System.out.print(automotor1);
-    }
-    
+    }  
 }

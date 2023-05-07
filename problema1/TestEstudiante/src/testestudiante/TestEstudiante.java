@@ -32,22 +32,22 @@ class Estudiante{
         this.promedio = (this.nota1+this.nota2+this.nota3)/3;
     }
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
     public double getNota1() {
-        return nota1;
+        return this.nota1;
     }
     public double getNota2() {
-        return nota2;
+        return this.nota2;
     }
     public double getNota3() {
-        return nota3;
+        return this.nota3;
     }
     public double getCalcularPromedio() {
-        return promedio;
+        return this.promedio;
     }
     public Universidad getUniversidad() {
-        return universidad;
+        return this.universidad;
     }
     public String toString() {
         return """
@@ -74,10 +74,10 @@ class Universidad{
         this.direccion = direccion;
     }
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
     public String getDireccion() {
-        return direccion;
+        return this.direccion;
     }
     public String toString(){
         return String.format("""
@@ -88,7 +88,7 @@ class Universidad{
 public class TestEstudiante {
     public static void main(String[] args) {
         Universidad universidad1 = new Universidad ("UTPL","San Cayetano");
-        Estudiante estudiante1 = new Estudiante ("Augusto",6,10,10,universidad1);
+        Estudiante estudiante1 = new Estudiante (" Augusto",6,10,10,universidad1);
         estudiante1.calcularPromedio();
         System.out.print(estudiante1);
     }
